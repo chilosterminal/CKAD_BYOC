@@ -12,25 +12,48 @@
   <body>
     <div class="container">
         <div class="row timer-block highlight">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <p>This is a timer</p>
+            <div class="col-sm-0"></div>
+            <div class="col-sm-11" align="center">
+                <iframe width="320" height="100" src="https://vclock.com/embed/set-timer-for-2-hours/#digital=0&theme=0&ampm=1&sound=xylophone" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="col-sm-1"></div>
+            <div class="col-sm-1"><br><br><br></div>
         </div>
         <div class="row cluster-context">
             <div class="col-sm-1"></div>
-            <div class="col-sm-10">Context</div>
-            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <p>Question 1</p>
+                <br>
+                <code>testing cide context set</code></div>
+            <div class="col-sm-1"><br><br><br><br><br></div>
         </div>
         <div class="row question-block">
             <div class="col-sm-1"></div>
-            <div class="col-sm-10">Question</div>
-            <div class="col-sm-1"></div>
+            <div class="col-sm-10">This is a questions <code>what</code> do you think?</div>
+            <div class="col-sm-1"><br><br><br><br><br></div>
         </div>
         <div class="row arrow-buttons">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10"></div>
+            <div class="col-sm-1">Last</div>
+            <div class="col-sm-10">
+                <div class="dropdown" align=center>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Questions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button">Question One</button>
+                      <button class="dropdown-item" type="button">Question Two</button>
+                      <button class="dropdown-item" type="button">Question Three</button>
+                      <button class="dropdown-item" type="button">Question Four</button>
+                      <button class="dropdown-item" type="button">Question Five</button>
+                      <button class="dropdown-item" type="button">Question Six</button>
+                      <button class="dropdown-item" type="button">Question Seven</button>
+                      <button class="dropdown-item" type="button">Question Eight</button>
+                      <button class="dropdown-item" type="button">Question Nine</button>
+                      <button class="dropdown-item" type="button">Question Ten</button>
+                      <button class="dropdown-item" type="button">Question Eleven</button>
+                      <button class="dropdown-item" type="button">Question Twelve</button>
+                    </div>
+                  </div>
+            </div>
             <div class="col-sm-1">Next</div>
         </div>
     </div>
@@ -39,5 +62,20 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="lib/easytimer/dist/easytimer.min.js"></script>
+    <script>
+        var timerInstance = new easytimer.Timer();
+    </script>
+    <script>
+        var timer = new Timer();
+        timer.start({countdown: true, startValues: {seconds: 3600}});
+        $('#countdownExample .values').html(timer.getTimeValues().toString());
+        timer.addEventListener('secondsUpdated', function (e) {
+            $('#countdownExample .values').html(timer.getTimeValues().toString());
+        });
+        timer.addEventListener('targetAchieved', function (e) {
+            $('#countdownExample .values').html('KABOOM!!');
+        });
+        </script>
   </body>
 </html>
