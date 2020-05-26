@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <p>start exam <code>this is code</code>this is not code</p>
+</div>
+{% endblock %}
+
+
+
+
+
+
+{% comment %} <ul>
+  {% for question in questions %}
+  <li>
+  <a href="{% url 'question_detail' question.id %}">
+    {{ question.name_short|capfirst}}
+    </a>
+  </li>
+  {% endfor %}
+</ul> {% endcomment %}
