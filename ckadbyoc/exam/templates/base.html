@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{% static 'main1.css' %}">
   </head>
   <body>
-    {% block content %}
     <div class="container">
         <div class="row timer-block highlight">
             <div class="col-sm-0"></div>
@@ -33,7 +32,8 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <!--- web/questions/test/index.html -->
-                This is a questions <code>what</code> do you think?</div>
+                {% block content %}
+                {% endblock content %}
             <div class="col-sm-1"><br><br><br><br><br></div>
         </div>
         <div class="row arrow-buttons">
@@ -44,9 +44,9 @@
                       Questions
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button" href=''>Question One</button>
-                      <button class="dropdown-item" type="button">Question Two</button>
-                      <button class="dropdown-item" type="button">Question Three</button>
+                    {% for question in Questions %}
+                      <button class="dropdown-item" type="button" href='{ question.id }'>Question { question.id }</button>
+                    {% endfor %}
                     </div>
                   </div>
             </div>
@@ -59,7 +59,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="lib/easytimer/dist/easytimer.min.js"></script>
-    {% endblock content %}
   </body>
 </html>
 
