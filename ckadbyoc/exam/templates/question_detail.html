@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="row cluster-context">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <p></p>
+        <br>
+        <code>{{ question.context }}</code></div>
+    <div class="col-sm-1"><br><br><br><br><br></div>
+</div>
+<div class="row question-block">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+    <h3>{{ question.context }}</h3>
+    </a>
+    <p>{{ question.nscontext }}</p>
+    <p>{{ question.question }}</p>
+    </div>
+    <div class="col-sm-1"><br><br><br><br><br></div>
+</div>
+
+
 <div>
     <h3>{{ question.context }}</h3>
     </a>

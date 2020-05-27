@@ -20,22 +20,8 @@
             </div>
             <div class="col-sm-1"><br><br><br></div>
         </div>
-        <div class="row cluster-context">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <p>Question 1</p>
-                <br>
-                <code>testing cide context set</code></div>
-            <div class="col-sm-1"><br><br><br><br><br></div>
-        </div>
-        <div class="row question-block">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <!--- web/questions/test/index.html -->
-                {% block content %}
-                {% endblock content %}
-            <div class="col-sm-1"><br><br><br><br><br></div>
-        </div>
+          {% block content %}
+          {% endblock content %}
         <div class="row arrow-buttons">
             <div class="col-sm-1">Last</div>
             <div class="col-sm-10">
@@ -44,9 +30,11 @@
                       Questions
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    {% block qlist %}
                     {% for question in Questions %}
-                      <button class="dropdown-item" type="button" href='{ question.id }'>Question { question.id }</button>
+                      <a href='/exam/{ question.id }'>Question { question.id }</a>
                     {% endfor %}
+                    {% endblock %}
                     </div>
                   </div>
             </div>

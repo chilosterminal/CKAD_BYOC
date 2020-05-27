@@ -1,7 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-  <p>start exam <code>this is code</code>this is not code</p>
+<div class="row cluster-context">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <p>Welcome to the exam simulator</p>
+        <br>
+        <code>Context command to copy</code></div>
+    <div class="col-sm-1"><br><br><br><br><br></div>
+</div>
+<div class="row question-block">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+    <p> This is where you will see the question. Anything with a white background is text you can copy. <code>Like this</code><br>
+    Start the timer at the top then
+    click the dropdown to see the first question.
+    When you finish the question click 'Next'
+    </div>
+    <div class="col-sm-1"><br><br><br><br><br></div>
 </div>
 {% endblock %}
 
