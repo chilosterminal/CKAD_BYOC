@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class='pagination'>
-    {% for num in qlist.paginator.page_range %}
-    <strong>{{ num }}</strong>
-    {% endfor %}
+<div class='bt-pagination'>
 </div>
 {% comment %} first row is for the context {% endcomment %}
 <div class="row cluster-context">
@@ -25,6 +22,7 @@
     </div>
     <div class="col-sm-1"><br><br><br><br><br></div>
 </div>
+
 {% comment %} navigation is at the bottom {% endcomment %}
 <div class="row arrow-buttons">
 <div class="col-sm-1">Last</div>

@@ -22,24 +22,7 @@
         </div>
           {% block content %}
           {% endblock content %}
-        <div class="row arrow-buttons">
-            <div class="col-sm-1">Last</div>
-            <div class="col-sm-10">
-                <div class="dropdown" align=center>
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Questions
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    {% block qlist %}
-                    {% for question in Questions %}
-                      <a href='/exam/{ question.id }'>Question { question.id }</a>
-                    {% endfor %}
-                    {% endblock %}
-                    </div>
-                  </div>
-            </div>
-            <div class="col-sm-1">Next</div>
-        </div>
+        
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
